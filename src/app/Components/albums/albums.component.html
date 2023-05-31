@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <div class="row">
+        <p class="fw-bolder d-flex justify-content-center fs-6" style="color: #E06C4F;">{{user.name}}'s Albums</p>
+        <hr>
+        <div class="d-flex justify-content-center flex-wrap">
+            <div *ngFor="let a of albums">
+                <div *ngIf="a.userId == user.id">
+    
+                    <div class="card mx-3 my-4" style="width: 15rem;" routerLink="/user-album-details/{{user.id}}">
+                        <div class="card-body" style="background-color: #E06C4F; height: 7rem;">
+                            <p class="card-text text-light fw-bold">Album {{a.id}}</p>
+                        </div>
+                        <div class="card-title d-flex justify-content-center">
+                            <p class="card-text"><b>50</b><br>Photos</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

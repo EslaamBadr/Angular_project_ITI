@@ -1,0 +1,56 @@
+<style>
+    #updatepopup{
+    position:fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid;
+      background-color: white;
+      width: 70%;
+    }
+    </style>
+    
+    <div class="container" id="updatepopup">
+        <div class="row d-flex flex-row-reverse p-2">
+            <button class="rounded-circle text-secondary d-flex justify-content-center" style="width: 2rem; height: 2rem;"
+                (click)="close()">x</button>
+        </div>
+        <div class="container">
+            <div class="row mx-5">
+                <p class="d-flex justify-content-center fw-bolder text-warning">User Information</p>
+                <hr>
+            </div>
+            <div class="row mx-5">
+                <div class="col-6">
+                    <p class="fw-bolder">Name</p>
+                    <input class="form-control" type="text" #name placeholder="eg: John Doe" value="" required><br>
+                    <p class="fw-bolder">ID</p>
+                    <input class="form-control" type="text" #id placeholder="eg: 11" value="{{user.name}}" required>
+                </div>
+                <div class="col-6">
+                    <p class="fw-bolder">email</p>
+                    <input class="form-control" type="text" #email placeholder="eg: johndoe@gmail.com" required><br>
+                    <p class="fw-bolder">Phone</p>
+                    <input class="form-control" type="text" #phone placeholder="eg: 01123456789" required>
+                </div>
+            </div><br>
+    
+            <div class="row mx-5">
+                <p class="fw-bolder">Address</p>
+                <div class="col-4">
+                    <input class="form-control " type="text" #city placeholder="city" required>
+                </div>
+                <div class="col-4">
+                    <input class="form-control " type="text" #street placeholder="Street" required>
+                </div>
+                <div class="col-4">
+                    <input class="form-control " type="text" #suite placeholder="Suite" required>
+                </div>
+            </div>
+            <div class="row m-3">
+                <div class="col d-flex justify-content-center">
+                    <button class="btn btn-primary" style="width: 12em; height: 2em;" (click)="update()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>

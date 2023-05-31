@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="d-flex justify-content-around bg-primary p-2">
+            <p class="text-light fs-5 m-0">Users</p>
+            <button class="btn btn-light rounded-0" style="width: 12em; height: 2em;" (click)="openPopup()">+ Add
+                User</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-4 ">
+        <div class="col">
+            <table class="table" >
+                <thead>
+                    <tr class="table-info">
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>email</td>
+                        <td>Phone</td>
+                        <td>Address</td>
+                        <td>Info</td>
+                        <td>Update</td>
+                        <td>Delete</td>
+                    </tr>
+                </thead>
+                <tbody id="user-table">
+                    <tr *ngFor="let u of users" class="table-light" >
+                        <td>{{u.id}}</td>
+                        <td>{{u.name}}</td>
+                        <td>{{u.email}}</td>
+                        <td>{{u.phone}}</td>
+                        <td>{{u.address.suite}} {{u.address.street}}, {{u.address.city}}</td>
+                        <td><button type="button" class="btn btn-primary" routerLink="/user/{{u.id}}">Info</button></td>
+                        <td><button type="button" class="btn btn-success" (click)="openUpdatePopup()">Update</button></td>
+                        <td><button type="button" class="btn btn-danger" (click)="delete(u.id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

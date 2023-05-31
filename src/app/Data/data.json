@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Eslam",
+      "email": "eslambadr@gmail.com",
+      "phone": "01116528587",
+      "address": {
+        "street": "Salah eldeen st",
+        "suite": "22",
+        "city": "Suez"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ali",
+      "email": "ali@gmail.com",
+      "phone": "0101027621",
+      "address": {
+        "street": "Salah eldeen st",
+        "suite": "33",
+        "city": "Suez"
+      }
+    },
+    {
+      "name": "Adam",
+      "email": "adamahmed@gmail.com",
+      "phone": "0102030405",
+      "address": {
+        "city": "Suez",
+        "street": "talaat",
+        "suite": "55"
+      },
+      "id": 3
+    },
+    {
+      "name": "adam",
+      "email": "adamafmed@gmail.com",
+      "phone": "0102030405",
+      "address": {
+        "city": "Suez",
+        "street": "momo",
+        "suite": "23"
+      },
+      "id": 4
+    }
+  ]
+}
